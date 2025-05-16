@@ -5,6 +5,11 @@ import db from "./config/db.js";
 
 const app = express();
 
+
+app.use(express.urlencoded({ extended: true }));
+
+
+
 try {
 db.authenticate();
 console.log("Connected to database");
