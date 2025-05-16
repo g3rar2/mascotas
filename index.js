@@ -1,6 +1,20 @@
 import express from 'express';
 import usuarioRoutes  from "./routes/usuarioRoutes.js";
+import db from "./config/db.js";
+
+
 const app = express();
+
+try {
+db.authenticate();
+console.log("Connected to database");
+}catch(error) {
+console.log(error);
+}
+
+
+
+
 const port = 3000;
 app.use(express.json());
 
