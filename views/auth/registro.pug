@@ -1,2 +1,11 @@
-div
-    h2 Crea tu cuenta
+extends ../layout/index
+
+block contenido
+    div.py-10
+        h1.text-4xl.my-10.font-extrabold.text-center Encuentra tu Mascota
+        h2.text-center.text-6xl= pagina
+
+        form
+            div
+                label.block.text-sm.uppercase.text-gray-500.mb-2.font-bold TU NOMBRE
+                input#nombre.w-full.px-3.py-2.border.border-gray-300
